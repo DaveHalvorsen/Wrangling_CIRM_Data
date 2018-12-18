@@ -2,7 +2,7 @@
 
 
 ## Exons *ARE* Coding DNA
-Here are some scripts I wrote about transcription and translation. 
+Here are some scripts I wrote about transcription and translation back in August of 2017. **You can see that I had exons as coding DNA correct in my mind back then** ... Oops! I hope you can consider my mixup as a temporary one :)
 * RNA -> Protein https://github.com/DaveHalvorsen/Bioinformatics_Challenges/blob/master/Bioinformatics_Stronghold/rna_into_protein.py
 * DNA -> RNA https://github.com/DaveHalvorsen/Bioinformatics_Challenges/blob/master/Bioinformatics_Stronghold/transcribing_dna_into_rna.py
 * Splitting Genomic DNA https://github.com/DaveHalvorsen/Python_for_Biologists/tree/master/Splitting_Genomic_DNA
