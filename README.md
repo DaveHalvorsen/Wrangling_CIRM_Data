@@ -63,6 +63,7 @@ sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
 mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
 
 +-----------+
+
 | file_type |
 +-----------+
 | reads     |
@@ -74,6 +75,7 @@ mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
 mysql> SELECT * FROM Quake_Shell_Table LIMIT 3;
 
 +-----------+-----------+------------+-----------------------+
+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
 | sc000AJX  | reads     | SRR1974546 | SRR1974546_1.fastq.gz |
@@ -85,6 +87,7 @@ mysql> SELECT * FROM Quake_Shell_Table LIMIT 3;
 mysql> SELECT COUNT(*) FROM Quake_Shell_Table;
 
 +----------+
+
 | COUNT(*) |
 +----------+
 |     1411 |
@@ -118,6 +121,7 @@ q.gz
 mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz";
 
 +-----------+-----------+------------+-----------------------+
+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
 | sc000AUC  | reads     | SRR1974678 | SRR1974678_1.fastq.gz |
@@ -127,6 +131,7 @@ mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz"
 mysql> SELECT * FROM Quake_Shell_Table WHERE file_name = "SRR1974824_1.fastq.gz";
 
 +-----------+-----------+------------+-----------------------+
+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
 | sc000BFM  | reads     | SRR1974824 | SRR1974824_1.fastq.gz |
