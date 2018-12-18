@@ -6,21 +6,19 @@ These programs can be found in the Exons_and_Introns folder:
 * Splicing_Out_Introns_2.py returns a sequence of ONLY the coding regions of the DNA and it returns the percentage of coding DNA.
 * Splicing_Out_Introns_3.py returns a sequence of coding bases as UPPER CASE and non-coding bases as lowercase.
 * RNA_Splicing.py is a simple example of removing the introns from a small RNA string.
-* I SHOULD DO AN EXAMPLE WITH BIOPYTHON: https://www.biostars.org/p/97746/
-NOTE: These programs assume only one reading frame and one DNA string. Computing all six reading frames is *way* beyond my skills!
+* NOTE: These programs assume only one reading frame and one DNA string. Computing all six reading frames is *way* beyond my skills! I SHOULD DO AN EXAMPLE WITH BIOPYTHON: https://www.biostars.org/p/97746/
 
-# Promoters (R Studio)
+# Promoter Regions (R Studio)
 These files can be found in the Promoters folder:
-* how_to_extract_promoters_positions.Rmd 
-* TF_Binding_to_DNA_Promoter_Regions.Rmd
-* Identifying_Promoter_Regions.Rmd
+* how_to_extract_promoters_positions.Rmd is an R tutorial that I followed on determinging promoter regions from TxDb.Hsapiens.UCSC.hg19.knownGene.
+* TF_Binding_to_DNA_Promoter_Regions.Rmd is an R tutorial that I followed for searching out potential transcription factor / DNA promoter region interactions.  
 
 # Detecting Open Reading Frames (Python, R Studio)
 These files can be found in the Open_Reading_Frames folder:
-* identifying_open_reading_frames.py 
-* identifying_open_reading_frame_positions.py
+* identifying_open_reading_frames.py is a BioPython tutorial for finding ORFs.
+* identifying_open_reading_frame_positions.py is a BioPython tutorial for finding the positions of ORFs. 
 * ORFik_Overview.Rmd is an R Studio tutorial that I completed on ORFik, which is a package for exploring open reading frames. 
-* FindingGenesWithORFs.py
+* FindingGenesWithORFs.py this is an incorrect solution to a Rosalind.info ORF problem ... trying to figure things out.
 
 # Literature_Review
 These files can be found in the Literature_Review folder:
@@ -59,6 +57,8 @@ sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
 * quakeBrain_getting_info_COMPLETE.py is the same as "quakeBrain_getting_info_TEST.py" AND it runs through the whole shell script.
 * quakeBrain_ENTERING_MySQL_Rows.py runs through the whole shell script AND it enters all the data into a MySQL table.
 * Here are some MySQL demonstrations: 
+
+![demoing_Quake_Shell_Table](demoing_Quake_Shell_Table.png?raw=true "demoing_Quake_Shell_Table")
 
 mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
 
@@ -118,6 +118,9 @@ q.gz
 
 # Looking up the failed downloads in the MySQL Database I created above (MySQL)
 * This is an example of a MySQL request for the database that I created:
+
+![MySQL_Accession_Lookup](MySQL_Accession_Lookup.png?raw=true "MySQL_Accession_Lookup")
+
 mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz";
 
 +-----------+-----------+------------+-----------------------+
