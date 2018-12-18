@@ -60,41 +60,6 @@ sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
 
 ![demoing_Quake_Shell_Table](https://github.com/DaveHalvorsen/Wrangling_CIRM_Data/blob/master/MySQL_demoing_DISTINCT_STAR_COUNT.jpg "demoing_Quake_Shell_Table")
 
-mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
-
-+-----------+
-
-| file_type |
-+-----------+
-| reads     |
-| analysis  |
-| summary   |
-+-----------+
-3 rows in set (0.00 sec)
-
-mysql> SELECT * FROM Quake_Shell_Table LIMIT 3;
-
-+-----------+-----------+------------+-----------------------+
-
-| accession | file_type | meta_name  | file_name             |
-+-----------+-----------+------------+-----------------------+
-| sc000AJX  | reads     | SRR1974546 | SRR1974546_1.fastq.gz |
-| sc000AJY  | reads     | SRR1974550 | SRR1974550_1.fastq.gz |
-| sc000AJZ  | reads     | SRR1974549 | SRR1974549_2.fastq.gz |
-+-----------+-----------+------------+-----------------------+
-3 rows in set (0.00 sec)
-
-mysql> SELECT COUNT(*) FROM Quake_Shell_Table;
-
-+----------+
-
-| COUNT(*) |
-+----------+
-|     1411 |
-+----------+
-1 row in set (0.00 sec)
-
-
 # Identifying failed downloads without a log file (Python, .txt, terminal)
 * what_files_failed.py is a sneaky way of identifying which files failed to download in the absence of a log file. It starts by reading in a .txt output of the Working_Brain_Submitted_Many_Directories.sh standard output. It determines the row # that the shell script failed to download at AND looks up that row number in the download script itself. Here's the output for failed download file information for the Dec161056am_currently2DLfails.txt file:
 
@@ -120,26 +85,6 @@ q.gz
 * This is an example of a MySQL request for the database that I created:
 
 ![MySQL_Accession_Lookup](https://github.com/DaveHalvorsen/Wrangling_CIRM_Data/blob/master/MySQL_file_name_Search.jpg "MySQL_Accession_Lookup")
-
-mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz";
-
-+-----------+-----------+------------+-----------------------+
-
-| accession | file_type | meta_name  | file_name             |
-+-----------+-----------+------------+-----------------------+
-| sc000AUC  | reads     | SRR1974678 | SRR1974678_1.fastq.gz |
-+-----------+-----------+------------+-----------------------+
-1 row in set (0.01 sec)
-
-mysql> SELECT * FROM Quake_Shell_Table WHERE file_name = "SRR1974824_1.fastq.gz";
-
-+-----------+-----------+------------+-----------------------+
-
-| accession | file_type | meta_name  | file_name             |
-+-----------+-----------+------------+-----------------------+
-| sc000BFM  | reads     | SRR1974824 | SRR1974824_1.fastq.gz |
-+-----------+-----------+------------+-----------------------+
-1 row in set (0.00 sec)
 
 # Re-downloading those files WITHOUT searching CIRM for the download links (Terminal)
 * Note that the download links all have this structure:
