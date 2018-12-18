@@ -59,7 +59,9 @@ sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
 * quakeBrain_getting_info_COMPLETE.py is the same as "quakeBrain_getting_info_TEST.py" AND it runs through the whole shell script.
 * quakeBrain_ENTERING_MySQL_Rows.py runs through the whole shell script AND it enters all the data into a MySQL table.
 * Here are some MySQL demonstrations: 
+
 mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
+
 +-----------+
 | file_type |
 +-----------+
@@ -70,6 +72,7 @@ mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
 3 rows in set (0.00 sec)
 
 mysql> SELECT * FROM Quake_Shell_Table LIMIT 3;
+
 +-----------+-----------+------------+-----------------------+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
@@ -80,6 +83,7 @@ mysql> SELECT * FROM Quake_Shell_Table LIMIT 3;
 3 rows in set (0.00 sec)
 
 mysql> SELECT COUNT(*) FROM Quake_Shell_Table;
+
 +----------+
 | COUNT(*) |
 +----------+
@@ -112,6 +116,7 @@ q.gz
 # Looking up the failed downloads in the MySQL Database I created above (MySQL)
 * This is an example of a MySQL request for the database that I created:
 mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz";
+
 +-----------+-----------+------------+-----------------------+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
@@ -120,6 +125,7 @@ mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz"
 1 row in set (0.01 sec)
 
 mysql> SELECT * FROM Quake_Shell_Table WHERE file_name = "SRR1974824_1.fastq.gz";
+
 +-----------+-----------+------------+-----------------------+
 | accession | file_type | meta_name  | file_name             |
 +-----------+-----------+------------+-----------------------+
