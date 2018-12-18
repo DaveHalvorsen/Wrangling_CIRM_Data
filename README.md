@@ -58,7 +58,7 @@ sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
 * quakeBrain_ENTERING_MySQL_Rows.py runs through the whole shell script AND it enters all the data into a MySQL table.
 * Here are some MySQL demonstrations: 
 
-![demoing_Quake_Shell_Table](demoing_Quake_Shell_Table.png?raw=true "demoing_Quake_Shell_Table")
+![demoing_Quake_Shell_Table](demoing_Quake_Shell_Table.png "demoing_Quake_Shell_Table")
 
 mysql> SELECT DISTINCT file_type FROM Quake_Shell_Table;
 
@@ -119,7 +119,7 @@ q.gz
 # Looking up the failed downloads in the MySQL Database I created above (MySQL)
 * This is an example of a MySQL request for the database that I created:
 
-![MySQL_Accession_Lookup](MySQL_Accession_Lookup.png?raw=true "MySQL_Accession_Lookup")
+![MySQL_Accession_Lookup](MySQL_Accession_Lookup.png "MySQL_Accession_Lookup")
 
 mysql> select * from Quake_Shell_Table where file_name = "SRR1974678_1.fastq.gz";
 
