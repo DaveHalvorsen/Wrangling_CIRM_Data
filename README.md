@@ -41,7 +41,7 @@ Here are the projects that I have completed:
 * I didn't have any issues downloading the Ischemia dataset from HCA. I identified a file # difference between CIRM's download pages and the # of files I received, so I changed the.html files to reflect that. 
 * I wrote R code to identify the top (~15) est_count reads, and their target_id labels, for samples that were 3*(standard_deviation)+average.  
 * I created a MySQL database of quakeBrainGeo1 based on the CIRM downloading script. It contains fields for accession, read_type, meta, and file name.
-* I noticed that the CIRM shell scripts download have a download log AND found that two downloads had failed for me that *were not reported*. I wrote Python code to read through the standard output of the downloads and identify which downloads failed. I then used the MySQL database that I had created earlier to identify a downloading link that I could use from the Linux terminal. 
+* I noticed that the CIRM shell download scripts DO NOT have a download log AND found that two downloads had failed for me that *were not reported* to the potential user ... this is bad because I only noticed cause I happened to see a new weird line! I wrote Python code to read through the standard output of the downloads and identify which downloads failed. I then used the MySQL database that I had created earlier to identify a downloading link that I could use from the Linux terminal. 
 
 #### Getting Current File # & Size (Python, Terminal) 
 The Python file is in the CIRM_HTML sub-folders for Kriegstein and Quake. 
@@ -72,9 +72,9 @@ NOTE: Actually it looks like I'm off by ~0.02 from the the 68–95–99.7 rule .
 These files are in the quakeBrain_Projects folder.
 * This project constructed a MySQL database of quakeBrainGeo1 file information from the script downloading file. Sure, the line is long:
 	* curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc000AKB' --create-dirs -o raw/reads-ByExp-sra-SRX-SRX995-SRX995861-SRR1974543-/SRR1974543_1.fastq.gz --insecure
-* HOWEVER, there are only a few unique bits of data.
-	* accession     file_type       meta_name       file_name
-sc000AKB      reads           SRR1974543      SRR1974543_1.fastq.gz
+* HOWEVER, there are only a few unique bits of data:
+	* accession,     file_type,       meta_name, &      file_name
+	* sc000AKB,      reads,           SRR1974543, &     SRR1974543_1.fastq.gz
 * quakeBrain_getting_info_TEST.py obtains accession, file_type, meta_name, and file_name on a small set of test cases.
 * quakeBrain_getting_info_COMPLETE.py is the same as "quakeBrain_getting_info_TEST.py" AND it runs through the whole shell script.
 * quakeBrain_ENTERING_MySQL_Rows.py runs through the whole shell script AND it enters all the data into a MySQL table.
@@ -107,8 +107,8 @@ q.gz
 #### Re-downloading those files WITHOUT searching CIRM for the download links (Terminal)
 * Note that the download links all have this structure:
 curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=ACCESSION_NUMBER' --insecure 
-* This is why we looked up the files on my MySQL database! We can plug in the accession numbers like so:
-	* wget https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc000AUC --no-check-certificate \n
+* This is why we looked up the files on my MySQL database earlier! Obviously, this is a slow & silly way of getting the missing data (cause I could've just searched for the files on CIRM). HOWEVER, I wanted to make this demo of my CIRM Wrangling logically pretty and interconnected :) We can plug in the accession numbers like so:
+	* wget https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc000AUC --no-check-certificate 
 	* wget https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc000BFM --no-check-certificate 
 
 
