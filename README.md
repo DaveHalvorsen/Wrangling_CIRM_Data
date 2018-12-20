@@ -1,4 +1,4 @@
-# Transcription and Translation: a Review (Python & R Studio)
+# Transcription and Translation Review (Python & R)
 I recently mixed up Exons with Introns :S ... here's a review of Exons, Introns, Promoters, and Open Reading Frames with examples done in R Studio & Python:
 
 #### Exons and Introns (Python)
@@ -26,6 +26,8 @@ These files can be found in the Open_Reading_Frames folder:
 * ORFik_Overview.Rmd is an R Studio tutorial that I completed on ORFik, which is a package for exploring open reading frames. 
 * FindingGenesWithORFs.py this is an incorrect solution to a Rosalind.info ORF problem ... trying to figure things out.
 
+![PLACEHOLDER](/Assets/identifying-open-reading-frames.jpg "PLACEHOLDER")
+
 # CIRM_and_HCA_Literature_Review
 These files can be found in the Literature_Review folder:
 * 34 CIRM Publications (and a Tag Storm poster)
@@ -33,7 +35,7 @@ These files can be found in the Literature_Review folder:
 * UCSC Genome Browser Publications
 * Short reviews of CIRM labs, Sequencing Methods, and CIRM Abstracts
 
-# Wrangling CIRM Data (Python, R, R Studio, MySQL, Terminal)
+# Wrangling CIRM Data (Python, R, R Studio, MySQL))
 Here are the projects that I have completed:
 * I had issues using the CIRM data download shell scripts ... specifically, I was getting "certificate verification failed" for Kriegstein and Quake data; I fixed the CIRM scripts by writing Python to add -- insecure to the end of each CIRM script. 
 * I didn't have any issues downloading the Ischemia dataset from HCA. I identified a file # difference between CIRM's download pages and the # of files I received, so I changed the.html files to reflect that. 
