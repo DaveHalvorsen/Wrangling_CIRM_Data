@@ -61,5 +61,6 @@ for i in range(0, len(RNA), three):
         print("STOP codon!")
         break
     protein_string += current_amino_acid
+print("the protein string is: ")
 print(protein_string)
 output.write(protein_string)
