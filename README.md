@@ -1,5 +1,5 @@
-# Transcription and Translation: a Review with Programming Examples
-I recently mixed up Exons with Introns :S ... here's a review of Exons, Introns, Promoters, and Open Reading Frames with examples done in R Studio, Python, and R:
+# Transcription and Translation: a Review (Python & R Studio)
+I recently mixed up Exons with Introns :S ... here's a review of Exons, Introns, Promoters, and Open Reading Frames with examples done in R Studio & Python:
 
 #### Exons and Introns (Python)
 These programs can be found in the Exons_and_Introns folder:
@@ -61,7 +61,8 @@ This project is in both of the CIRM_HTML sub-folders.
 #### Identifying Statistically Significant RNA-Seq est_counts (R Studio, .tsv)
 You can find these programs in the kriegsteinGlia_Projects folder. 
 * RNA-Seq_est_count_Statistics.Rmd is an intereactive exploration of this idea in R Studio.
-* RNA_Seq_est_count_Statistics.R is a static program that will run on an "abundance.tsv" file in the same directory. I'm currently using the file with accession name of sc003JHK.
+* RNA_Seq_est_count_Statistics.R is a static program that will run on an "abundance.tsv" file in the same directory. I'm currently using the file with accession name of sc003JHK. 
+NOTE: Actually it looks like I'm off by ~0.02 from the the 68–95–99.7 rule ... I should check on this, but I'm not too worried cause it's close to what Excel says.
 
 ![PLACEHOLDER](/Assets/statistically-significant-est-counts.jpg "PLACEHOLDER")
 
