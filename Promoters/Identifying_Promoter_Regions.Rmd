@@ -7,15 +7,15 @@ output: html_document
 # annotatr: Making sense of genomic regions by Raymond G. Cavalcante
 # https://bioconductor.org/packages/release/bioc/vignettes/annotatr/inst/doc/annotatr-vignette.html
 ```{r}
-if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
-BiocManager::install("annotatr")
+#if (!requireNamespace("BiocManager", quietly=TRUE))
+#    install.packages("BiocManager")
+#BiocManager::install("annotatr")
 library('annotatr')
 ```
 
 ```{r}
-install.packages("devtools")
-devtools::install_github('rcavalcante/annotatr')
+# install.packages("devtools")
+# devtools::install_github('rcavalcante/annotatr')
 ```
 
 
@@ -96,8 +96,15 @@ print(dm_annotated)
 df_dm_annotated = data.frame(dm_annotated)
 
 # See the GRanges column of dm_annotaed expanded
+print(df_dm_annotated)
+
+```
+
+```{r}
+# See the GRanges column of dm_annotaed expanded
 print(head(df_dm_annotated))
 ```
+
 
 ```{r}
 notch1_subset = subset(df_dm_annotated, annot.symbol == 'NOTCH1')
@@ -367,136 +374,3 @@ dm_vs_kg_cat = plot_categorical(
     y_label = 'Proportion')
 print(dm_vs_kg_cat)
 ```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-v

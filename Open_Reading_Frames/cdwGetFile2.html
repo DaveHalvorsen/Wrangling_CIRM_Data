@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel='STYLESHEET' href='/style/nice_menu.css' TYPE='text/css' />
+<link rel='STYLESHEET' href='/style/HGStyle.css' TYPE='text/css' />
+<link rel='STYLESHEET' href='/style/jquery-ui.css' TYPE='text/css' />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/js/jquery.plugins.js"></script>
+<script src="/js/cdwSummaryJs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css" ><script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+        <script src="//www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script src="//demos.flesler.com/jquery/scrollTo/js/jquery.scrollTo-min.js"></script>
+        
+    <title>Seurat Cluster Genes</title>
+</head>
+
+<body>
+
+<!--menuBar-->
+
+<style>
+#mainContent {
+   margin-left: 20px;  
+   color : #000;
+   }
+
+   table {
+    background:#D9F8E4;
+    border-collapse:collapse
+   }
+
+   thead tr {
+     background-color:#1616D1;
+     color:#FFFFFF;
+     vertical-align: top;
+     text-align: left
+   }
+
+   table, th, tr, td {
+    border: 1px solid black;
+    padding: 5px;
+   }
+</style>
+
+<div id="mainContent">
+
+    <h2>Seurat cluster-specific genes with power &gt; 0.30 and AUC &gt; 0.50 </h2>
+<ul>
+<li><a href='#Cluster2'>Cluster2 (139 genes)</a></li>
+<li><a href='#Cluster3'>Cluster3 (32 genes)</a></li>
+<li><a href='#Cluster4'>Cluster4 (35 genes)</a></li>
+</ul>
+<h3 id='Cluster2'>Cluster2</h3>
+<table>
+<tr><th>Gene</th><th>Avg. Diff</th><th>Power</th><th>AUC</th><th>Gene Type</th></tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000092820'>EZR</a></td>
+<td>1.24</td>
+<td>0.78</td>
+<td>0.89</td>
+<td>Actin family cytoskeletal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164434'>FABP7</a></td>
+<td>1.16</td>
+<td>0.744</td>
+<td>0.872</td>
+<td>Transfer/carrier protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000106278'>PTPRZ1</a></td>
+<td>1.20</td>
+<td>0.682</td>
+<td>0.841</td>
+<td>Receptor tyrosine phosphatase, cortical_outer_radial_glia</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000233639'>LINC01158</a></td>
+<td>0.84</td>
+<td>0.662</td>
+<td>0.831</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134138'>MEIS2</a></td>
+<td>0.79</td>
+<td>0.662</td>
+<td>0.831</td>
+<td>Transcription factor, DNA-directed RNA polymerase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000162599'>NFIA</a></td>
+<td>0.72</td>
+<td>0.656</td>
+<td>0.828</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000106689'>LHX2</a></td>
+<td>0.56</td>
+<td>0.656</td>
+<td>0.828</td>
+<td>Transcription regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000105855'>ITGB8</a></td>
+<td>0.76</td>
+<td>0.652</td>
+<td>0.826</td>
+<td>Cell surface receptor, extracellular matrix glycoprotein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000215386'>MIR99AHG</a></td>
+<td>1.33</td>
+<td>0.642</td>
+<td>0.821</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000184486'>POU3F2</a></td>
+<td>0.73</td>
+<td>0.618</td>
+<td>0.809</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000137575'>SDCBP</a></td>
+<td>1.13</td>
+<td>0.61</td>
+<td>0.805</td>
+<td>Adapter molecule, membrane trafficking regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000144369'>FAM171B</a></td>
+<td>0.85</td>
+<td>0.586</td>
+<td>0.793</td>
+<td>Integral membrane protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000079459'>FDFT1</a></td>
+<td>0.93</td>
+<td>0.584</td>
+<td>0.792</td>
+<td>Enzyme: Synthase, acyltransferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000175183'>CSRP2</a></td>
+<td>1.26</td>
+<td>0.58</td>
+<td>0.79</td>
+<td>Adapter molecule, actin family cytoskeletal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000187109'>NAP1L1</a></td>
+<td>0.91</td>
+<td>0.578</td>
+<td>0.789</td>
+<td>Transcription regulatory protein, phosphatase inhibitor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000118971'>CCND2</a></td>
+<td>0.72</td>
+<td>0.57</td>
+<td>0.785</td>
+<td>Cell cycle control protein, kinase activator</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134532'>SOX5</a></td>
+<td>0.87</td>
+<td>0.568</td>
+<td>0.784</td>
+<td>HMG box transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139289'>PHLDA1</a></td>
+<td>0.59</td>
+<td>0.564</td>
+<td>0.782</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000173905'>GOLIM4</a></td>
+<td>0.38</td>
+<td>0.564</td>
+<td>0.782</td>
+<td>Integral membrane protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000111716'>LDHB</a></td>
+<td>0.93</td>
+<td>0.558</td>
+<td>0.779</td>
+<td>Enzyme: Dehydrogenase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000112972'>HMGCS1</a></td>
+<td>0.72</td>
+<td>0.554</td>
+<td>0.777</td>
+<td>Enzyme: Synthase, lyase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000146592'>CREB5</a></td>
+<td>1.34</td>
+<td>0.55</td>
+<td>0.775</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171617'>ENC1</a></td>
+<td>0.69</td>
+<td>0.546</td>
+<td>0.773</td>
+<td>Non-motor actin binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000271860'>RP11-436D23.1</a></td>
+<td>0.68</td>
+<td>0.544</td>
+<td>0.772</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000122574'>WIPF3</a></td>
+<td>0.78</td>
+<td>0.542</td>
+<td>0.771</td>
+<td>Cytoskeletal associated protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000105894'>PTN</a></td>
+<td>1.47</td>
+<td>0.538</td>
+<td>0.769</td>
+<td>Cytokine</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000119522'>DENND1A</a></td>
+<td>0.49</td>
+<td>0.538</td>
+<td>0.769</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000111669'>TPI1</a></td>
+<td>0.92</td>
+<td>0.53</td>
+<td>0.765</td>
+<td>Enzyme: Isomerase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000091656'>ZFHX4</a></td>
+<td>0.44</td>
+<td>0.53</td>
+<td>0.765</td>
+<td>Transcription factor, structural protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000005022'>SLC25A5</a></td>
+<td>0.99</td>
+<td>0.522</td>
+<td>0.761</td>
+<td>Mitochondrial carrier protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000095637'>SORBS1</a></td>
+<td>0.53</td>
+<td>0.514</td>
+<td>0.757</td>
+<td>Membrane trafficking regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000157827'>FMNL2</a></td>
+<td>1.17</td>
+<td>0.508</td>
+<td>0.754</td>
+<td>Non-motor actin binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000148516'>ZEB1</a></td>
+<td>1.01</td>
+<td>0.508</td>
+<td>0.754</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000255248'>RP11-166D19.1</a></td>
+<td>0.77</td>
+<td>0.506</td>
+<td>0.753</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000001630'>CYP51A1</a></td>
+<td>0.56</td>
+<td>0.506</td>
+<td>0.753</td>
+<td>Oxygenase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000180817'>PPA1</a></td>
+<td>0.59</td>
+<td>0.504</td>
+<td>0.752</td>
+<td>Enzyme: Phosphohydrolase, pyrophosphatase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000052802'>MSMO1</a></td>
+<td>0.93</td>
+<td>0.498</td>
+<td>0.749</td>
+<td>Hydroxylase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000170802'>FOXN2</a></td>
+<td>0.64</td>
+<td>0.498</td>
+<td>0.749</td>
+<td>DNA binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138193'>PLCE1</a></td>
+<td>0.34</td>
+<td>0.496</td>
+<td>0.748</td>
+<td>Guanine nucleotide exchange factor, phospholipase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000174444'>RPL4</a></td>
+<td>0.54</td>
+<td>0.494</td>
+<td>0.747</td>
+<td>Ribosomal subunit</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000230989'>HSBP1</a></td>
+<td>0.73</td>
+<td>0.49</td>
+<td>0.745</td>
+<td>Transcription regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000111728'>ST8SIA1</a></td>
+<td>0.58</td>
+<td>0.486</td>
+<td>0.743</td>
+<td>Enzyme: Sialyltransferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000186073'>C15orf41</a></td>
+<td>0.57</td>
+<td>0.486</td>
+<td>0.743</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000254772'>EEF1G</a></td>
+<td>0.56</td>
+<td>0.486</td>
+<td>0.743</td>
+<td>Translation regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000008441'>NFIX</a></td>
+<td>0.56</td>
+<td>0.484</td>
+<td>0.742</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000123416'>TUBA1B</a></td>
+<td>1.25</td>
+<td>0.482</td>
+<td>0.741</td>
+<td>Structural protein, tubulin</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164199'>ADGRV1</a></td>
+<td>0.56</td>
+<td>0.482</td>
+<td>0.741</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000197958'>RPL12</a></td>
+<td>0.54</td>
+<td>0.482</td>
+<td>0.741</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139163'>ETNK1</a></td>
+<td>0.59</td>
+<td>0.48</td>
+<td>0.74</td>
+<td>Enzyme: Phosphotransferase, kinase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000170296'>GABARAP</a></td>
+<td>0.58</td>
+<td>0.478</td>
+<td>0.739</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164687'>FABP5</a></td>
+<td>1.24</td>
+<td>0.476</td>
+<td>0.738</td>
+<td>Transfer/carrier protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000135390'>ATP5G2</a></td>
+<td>0.48</td>
+<td>0.476</td>
+<td>0.738</td>
+<td>ATPase, ATP synthase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134278'>SPIRE1</a></td>
+<td>1.14</td>
+<td>0.474</td>
+<td>0.737</td>
+<td>Actin family cytoskeletal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000084207'>GSTP1</a></td>
+<td>0.44</td>
+<td>0.47</td>
+<td>0.735</td>
+<td>Enzyme: Glutathione transferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000130066'>SAT1</a></td>
+<td>1.35</td>
+<td>0.468</td>
+<td>0.734</td>
+<td>Enzyme: Acyltransferase, acetyltransferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000071082'>RPL31</a></td>
+<td>0.46</td>
+<td>0.468</td>
+<td>0.734</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000175061'>LRRC75A-AS1</a></td>
+<td>0.44</td>
+<td>0.466</td>
+<td>0.733</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000109472'>CPE</a></td>
+<td>0.34</td>
+<td>0.466</td>
+<td>0.733</td>
+<td>Carboxypeptidase, metalloprotease</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000099797'>TECR</a></td>
+<td>0.34</td>
+<td>0.462</td>
+<td>0.731</td>
+<td>Enzyme: Reductase, dehydrogenase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164587'>RPS14</a></td>
+<td>0.45</td>
+<td>0.458</td>
+<td>0.729</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000162188'>GNG3</a></td>
+<td>0.41</td>
+<td>0.458</td>
+<td>0.729</td>
+<td>Heterotrimeric G-protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000213186'>TRIM59</a></td>
+<td>0.82</td>
+<td>0.456</td>
+<td>0.728</td>
+<td>Ubiquitin proteasome system protein, ubiquitin-protein ligase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000135842'>FAM129A</a></td>
+<td>0.35</td>
+<td>0.456</td>
+<td>0.728</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000186468'>RPS23</a></td>
+<td>0.27</td>
+<td>0.454</td>
+<td>0.727</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000182667'>NTM</a></td>
+<td>0.39</td>
+<td>0.452</td>
+<td>0.726</td>
+<td>Immunoglobulin superfamily cell adhesion</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000087510'>TFAP2C</a></td>
+<td>0.74</td>
+<td>0.444</td>
+<td>0.722</td>
+<td>Transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108298'>RPL19</a></td>
+<td>0.44</td>
+<td>0.444</td>
+<td>0.722</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000125691'>RPL23</a></td>
+<td>0.26</td>
+<td>0.444</td>
+<td>0.722</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000111640'>GAPDH</a></td>
+<td>0.74</td>
+<td>0.442</td>
+<td>0.721</td>
+<td>Enzyme: Dehydrogenase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000064042'>LIMCH1</a></td>
+<td>0.64</td>
+<td>0.442</td>
+<td>0.721</td>
+<td>Actin family cytoskeletal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000135540'>NHSL1</a></td>
+<td>0.52</td>
+<td>0.442</td>
+<td>0.721</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000229117'>RPL41</a></td>
+<td>0.49</td>
+<td>0.442</td>
+<td>0.721</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000115268'>RPS15</a></td>
+<td>0.53</td>
+<td>0.44</td>
+<td>0.72</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138771'>SHROOM3</a></td>
+<td>0.46</td>
+<td>0.44</td>
+<td>0.72</td>
+<td>Adapter molecule, ligand-gated ion channel</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000100804'>PSMB5</a></td>
+<td>0.42</td>
+<td>0.44</td>
+<td>0.72</td>
+<td>Ubiquitin proteasome system protein, protease</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000063177'>RPL18</a></td>
+<td>0.36</td>
+<td>0.44</td>
+<td>0.72</td>
+<td>Ribosomal subunit</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000261604'>CTD-2636A23.2</a></td>
+<td>0.32</td>
+<td>0.438</td>
+<td>0.719</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000163257'>DCAF16</a></td>
+<td>0.33</td>
+<td>0.436</td>
+<td>0.718</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169567'>HINT1</a></td>
+<td>0.32</td>
+<td>0.436</td>
+<td>0.718</td>
+<td>ATPase, nucleotide phosphatase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000196531'>NACA</a></td>
+<td>0.49</td>
+<td>0.434</td>
+<td>0.717</td>
+<td>Chaperone, basic helix-loop-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000163597'>SNHG16</a></td>
+<td>0.48</td>
+<td>0.434</td>
+<td>0.717</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000083845'>RPS5</a></td>
+<td>0.59</td>
+<td>0.432</td>
+<td>0.716</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000168000'>BSCL2</a></td>
+<td>0.51</td>
+<td>0.432</td>
+<td>0.716</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000011454'>RABGAP1</a></td>
+<td>0.28</td>
+<td>0.432</td>
+<td>0.716</td>
+<td>GTPase activating protein, G-protein modulator</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000156475'>PPP2R2B</a></td>
+<td>0.86</td>
+<td>0.43</td>
+<td>0.715</td>
+<td>Regulatory/other subunit, Serine/threonine phosphatase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000172115'>CYCS</a></td>
+<td>0.60</td>
+<td>0.43</td>
+<td>0.715</td>
+<td>Enzyme: Oxidase, mitochondrial carrier protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000124767'>GLO1</a></td>
+<td>0.54</td>
+<td>0.43</td>
+<td>0.715</td>
+<td>Enzyme: Lyase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108107'>RPL28</a></td>
+<td>0.38</td>
+<td>0.43</td>
+<td>0.715</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000182628'>SKA2</a></td>
+<td>0.46</td>
+<td>0.428</td>
+<td>0.714</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000132326'>PER2</a></td>
+<td>0.47</td>
+<td>0.426</td>
+<td>0.713</td>
+<td>DNA binding protein, transcription cofactor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000104332'>SFRP1</a></td>
+<td>0.78</td>
+<td>0.424</td>
+<td>0.712</td>
+<td>Secreted polypeptide, G-protein coupled receptor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000074800'>ENO1</a></td>
+<td>0.98</td>
+<td>0.422</td>
+<td>0.711</td>
+<td>Enzyme: Hydratase, lyase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000174021'>GNG5</a></td>
+<td>0.67</td>
+<td>0.422</td>
+<td>0.711</td>
+<td>Heterotrimeric G-protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000196419'>XRCC6</a></td>
+<td>0.53</td>
+<td>0.422</td>
+<td>0.711</td>
+<td>DNA binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000162244'>RPL29</a></td>
+<td>0.33</td>
+<td>0.422</td>
+<td>0.711</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198242'>RPL23A</a></td>
+<td>0.29</td>
+<td>0.422</td>
+<td>0.711</td>
+<td>RNA binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000196586'>MYO6</a></td>
+<td>0.33</td>
+<td>0.42</td>
+<td>0.71</td>
+<td>Actin binding motor protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000137814'>HAUS2</a></td>
+<td>0.29</td>
+<td>0.42</td>
+<td>0.71</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171843'>MLLT3</a></td>
+<td>1.04</td>
+<td>0.418</td>
+<td>0.709</td>
+<td>Chromatin/chromatin-binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000007372'>PAX6</a></td>
+<td>0.93</td>
+<td>0.418</td>
+<td>0.709</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165629'>ATP5C1</a></td>
+<td>0.33</td>
+<td>0.418</td>
+<td>0.709</td>
+<td>Transport/cargo protein, ATP synthase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000117519'>CNN3</a></td>
+<td>0.30</td>
+<td>0.418</td>
+<td>0.709</td>
+<td>Non-motor actin binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000124226'>RNF114</a></td>
+<td>0.30</td>
+<td>0.418</td>
+<td>0.709</td>
+<td>Ubiquitin proteasome system protein, ubiquitin-protein ligase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000249784'>SCARNA22</a></td>
+<td>0.25</td>
+<td>0.418</td>
+<td>0.709</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000119042'>SATB2</a></td>
+<td>0.65</td>
+<td>0.416</td>
+<td>0.708</td>
+<td>Helix-turn-helix transcription factor, cortial_excitatory_neurons_upper_layer</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000163069'>SGCB</a></td>
+<td>0.58</td>
+<td>0.416</td>
+<td>0.708</td>
+<td>Structural protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000150593'>PDCD4</a></td>
+<td>0.45</td>
+<td>0.416</td>
+<td>0.708</td>
+<td>Translation elongation factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138758'>SEPT11</a></td>
+<td>0.43</td>
+<td>0.416</td>
+<td>0.708</td>
+<td>Small GTPase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000135298'>ADGRB3</a></td>
+<td>0.31</td>
+<td>0.416</td>
+<td>0.708</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000149925'>ALDOA</a></td>
+<td>0.60</td>
+<td>0.414</td>
+<td>0.707</td>
+<td>Enzyme: Lyase, Enzyme: Aldolase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000107951'>MTPAP</a></td>
+<td>0.57</td>
+<td>0.414</td>
+<td>0.707</td>
+<td>RNA polymerase, nucleotidyltransferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000156976'>EIF4A2</a></td>
+<td>0.50</td>
+<td>0.414</td>
+<td>0.707</td>
+<td>Translation regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000064309'>CDON</a></td>
+<td>0.40</td>
+<td>0.414</td>
+<td>0.707</td>
+<td>Immunoglobulin superfamily cell adhesion</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000090266'>NDUFB2</a></td>
+<td>0.26</td>
+<td>0.414</td>
+<td>0.707</td>
+<td>Enzyme: Oxidoreductase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000179222'>MAGED1</a></td>
+<td>0.57</td>
+<td>0.412</td>
+<td>0.706</td>
+<td>Cell cycle control protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141232'>TOB1</a></td>
+<td>0.51</td>
+<td>0.412</td>
+<td>0.706</td>
+<td>Adapter molecule</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000074201'>CLNS1A</a></td>
+<td>0.39</td>
+<td>0.412</td>
+<td>0.706</td>
+<td>Transport/cargo protein, transporter</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000174891'>RSRC1</a></td>
+<td>0.33</td>
+<td>0.412</td>
+<td>0.706</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000064651'>SLC12A2</a></td>
+<td>0.27</td>
+<td>0.412</td>
+<td>0.706</td>
+<td>Membrane transport protein, cation transporter</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000143401'>ANP32E</a></td>
+<td>1.09</td>
+<td>0.41</td>
+<td>0.705</td>
+<td>Phosphatase inhibitor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000136193'>SCRN1</a></td>
+<td>0.59</td>
+<td>0.41</td>
+<td>0.705</td>
+<td>Protease</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000039560'>RAI14</a></td>
+<td>0.48</td>
+<td>0.41</td>
+<td>0.705</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000083099'>LYRM2</a></td>
+<td>0.45</td>
+<td>0.41</td>
+<td>0.705</td>
+<td>Enzyme: Oxidoreductase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000154473'>BUB3</a></td>
+<td>1.07</td>
+<td>0.408</td>
+<td>0.704</td>
+<td>Cell cycle control protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000157168'>NRG1</a></td>
+<td>0.96</td>
+<td>0.408</td>
+<td>0.704</td>
+<td>Growth factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169375'>SIN3A</a></td>
+<td>0.63</td>
+<td>0.408</td>
+<td>0.704</td>
+<td>Transcription regulatory protein, deacetylase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000241343'>RPL36A</a></td>
+<td>0.37</td>
+<td>0.408</td>
+<td>0.704</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147403'>RPL10</a></td>
+<td>0.43</td>
+<td>0.406</td>
+<td>0.703</td>
+<td>Ribosomal protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000140538'>NTRK3</a></td>
+<td>0.34</td>
+<td>0.406</td>
+<td>0.703</td>
+<td>Receptor tyrosine kinase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000082397'>EPB41L3</a></td>
+<td>1.12</td>
+<td>0.404</td>
+<td>0.702</td>
+<td>Structural protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000173852'>DPY19L1</a></td>
+<td>0.76</td>
+<td>0.404</td>
+<td>0.702</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000102172'>SMS</a></td>
+<td>0.46</td>
+<td>0.404</td>
+<td>0.702</td>
+<td>Enzyme: Synthase, transferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000242265'>PEG10</a></td>
+<td>0.29</td>
+<td>0.404</td>
+<td>0.702</td>
+<td>Cell cycle control protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000074410'>CA12</a></td>
+<td>0.37</td>
+<td>0.402</td>
+<td>0.701</td>
+<td>Enzyme: Carbonic anhydrase, dehydratase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000276539'>RP11-35N6.1</a></td>
+<td>0.32</td>
+<td>0.402</td>
+<td>0.701</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000148123'>RP11-35N6.1</a></td>
+<td>0.32</td>
+<td>0.402</td>
+<td>0.701</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000125743'>SNRPD2</a></td>
+<td>0.30</td>
+<td>0.402</td>
+<td>0.701</td>
+<td>RNA binding protein, mRNA processing factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000144231'>POLR2D</a></td>
+<td>0.30</td>
+<td>0.402</td>
+<td>0.701</td>
+<td>RNA polymerase, transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000117450'>PRDX1</a></td>
+<td>0.28</td>
+<td>0.402</td>
+<td>0.701</td>
+<td>Enzyme: Peroxidase</td>
+</tr>
+</table>
+<h3 id='Cluster3'>Cluster3</h3>
+<table>
+<tr><th>Gene</th><th>Avg. Diff</th><th>Power</th><th>AUC</th><th>Gene Type</th></tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000231764'>DLX6-AS1</a></td>
+<td>3.60</td>
+<td>0.952</td>
+<td>0.976</td>
+<td>GABAergic_interneurons</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000178568'>ERBB4</a></td>
+<td>1.77</td>
+<td>0.906</td>
+<td>0.953</td>
+<td>Receptor tyrosine kinase, GABAergic_interneurons</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000115844'>DLX2</a></td>
+<td>1.03</td>
+<td>0.826</td>
+<td>0.913</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000105880'>DLX5</a></td>
+<td>1.84</td>
+<td>0.804</td>
+<td>0.902</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000128683'>GAD1</a></td>
+<td>2.09</td>
+<td>0.74</td>
+<td>0.87</td>
+<td>Enzyme: Decarboxylase, GABAergic_interneurons</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000021645'>NRXN3</a></td>
+<td>1.37</td>
+<td>0.728</td>
+<td>0.864</td>
+<td>Adhesion molecule</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000203441'>LINC00449</a></td>
+<td>0.32</td>
+<td>0.708</td>
+<td>0.854</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000102024'>PLS3</a></td>
+<td>1.68</td>
+<td>0.686</td>
+<td>0.843</td>
+<td>Non-motor actin binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000006377'>DLX6</a></td>
+<td>1.45</td>
+<td>0.628</td>
+<td>0.814</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000144355'>DLX1</a></td>
+<td>0.78</td>
+<td>0.618</td>
+<td>0.809</td>
+<td>Helix-turn-helix transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000111913'>FAM65B</a></td>
+<td>1.16</td>
+<td>0.61</td>
+<td>0.805</td>
+<td>Cell cycle control protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000115355'>CCDC88A</a></td>
+<td>1.18</td>
+<td>0.608</td>
+<td>0.804</td>
+<td>Cytoskeletal protein, kinase modulator</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000217236'>SP9</a></td>
+<td>0.44</td>
+<td>0.592</td>
+<td>0.796</td>
+<td>Zinc finger transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000221448'>AL118509.1</a></td>
+<td>1.37</td>
+<td>0.584</td>
+<td>0.792</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000178104'>PDE4DIP</a></td>
+<td>1.72</td>
+<td>0.58</td>
+<td>0.79</td>
+<td>Transport/cargo protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000121440'>PDZRN3</a></td>
+<td>1.07</td>
+<td>0.56</td>
+<td>0.78</td>
+<td>CGA-derived_GABAergic_interneurons, CGE_interneuron</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169554'>ZEB2</a></td>
+<td>1.37</td>
+<td>0.55</td>
+<td>0.775</td>
+<td>Transcription regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000101638'>ST8SIA5</a></td>
+<td>0.62</td>
+<td>0.548</td>
+<td>0.774</td>
+<td>Enzyme: Sialyltransferase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000079102'>RUNX1T1</a></td>
+<td>1.17</td>
+<td>0.546</td>
+<td>0.773</td>
+<td>Transcription regulatory protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000185670'>ZBTB3</a></td>
+<td>0.27</td>
+<td>0.532</td>
+<td>0.766</td>
+<td>DNA binding protein, zinc finger transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000070087'>PFN2</a></td>
+<td>1.35</td>
+<td>0.526</td>
+<td>0.763</td>
+<td>Structural protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198597'>ZNF536</a></td>
+<td>0.60</td>
+<td>0.504</td>
+<td>0.752</td>
+<td>DNA binding protein, zinc finger transcription factor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000101489'>CELF4</a></td>
+<td>0.54</td>
+<td>0.496</td>
+<td>0.748</td>
+<td>Replication origin binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000005810'>MYCBP2</a></td>
+<td>0.89</td>
+<td>0.494</td>
+<td>0.747</td>
+<td>Transcription regulatory protein, ubiquitin-protein ligase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000148798'>INA</a></td>
+<td>0.75</td>
+<td>0.492</td>
+<td>0.746</td>
+<td>Cytoskeletal protein, intermediate filament</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000214548'>MEG3</a></td>
+<td>1.16</td>
+<td>0.474</td>
+<td>0.737</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000258419'>RP11-588P7.1</a></td>
+<td>1.07</td>
+<td>0.466</td>
+<td>0.733</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000178573'>MAF</a></td>
+<td>1.28</td>
+<td>0.464</td>
+<td>0.732</td>
+<td>Transcription factor, CGA-derived_GABAergic_interneurons, MGE-derived_GABAergic_interneurons</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000127152'>BCL11B</a></td>
+<td>0.53</td>
+<td>0.46</td>
+<td>0.73</td>
+<td>Transcription regulatory protein, DNA binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000151090'>THRB</a></td>
+<td>0.72</td>
+<td>0.454</td>
+<td>0.727</td>
+<td>Nuclear hormone receptor, CGA-derived_GABAergic_interneurons, CGE_interneuron</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134121'>CHL1</a></td>
+<td>0.62</td>
+<td>0.446</td>
+<td>0.723</td>
+<td>Immunoglobulin superfamily cell adhesion</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000104435'>STMN2</a></td>
+<td>0.59</td>
+<td>0.41</td>
+<td>0.705</td>
+<td>Cytoskeletal associated protein</td>
+</tr>
+</table>
+<h3 id='Cluster4'>Cluster4</h3>
+<table>
+<tr><th>Gene</th><th>Avg. Diff</th><th>Power</th><th>AUC</th><th>Gene Type</th></tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000262354'>Y_RNA</a></td>
+<td>4.53</td>
+<td>0.992</td>
+<td>0.996</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000232035'>RP11-87N24.3</a></td>
+<td>2.76</td>
+<td>0.99</td>
+<td>0.995</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000254584'>RP1-17K7.2</a></td>
+<td>0.52</td>
+<td>0.984</td>
+<td>0.992</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000279120'>RP11-140I24.2</a></td>
+<td>0.52</td>
+<td>0.948</td>
+<td>0.974</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000272912'>RP11-724N1.1</a></td>
+<td>0.53</td>
+<td>0.914</td>
+<td>0.957</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000213889'>PPM1N</a></td>
+<td>0.27</td>
+<td>0.898</td>
+<td>0.949</td>
+<td>Kinase inhibitor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000112293'>GPLD1</a></td>
+<td>0.36</td>
+<td>0.87</td>
+<td>0.935</td>
+<td>Enzyme: Phospholipase</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000272189'>RP3-325F22.5</a></td>
+<td>0.27</td>
+<td>0.804</td>
+<td>0.902</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000210151'>MT-TS1</a></td>
+<td>2.35</td>
+<td>0.794</td>
+<td>0.897</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000210077'>MT-TV</a></td>
+<td>2.79</td>
+<td>0.714</td>
+<td>0.857</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000089335'>ZNF302</a></td>
+<td>0.51</td>
+<td>0.684</td>
+<td>0.842</td>
+<td>DNA binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171532'>NEUROD2</a></td>
+<td>0.71</td>
+<td>0.65</td>
+<td>0.825</td>
+<td>Basic helix-loop-helix transcription factor, neuron</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000212866'>HSPA1B</a></td>
+<td>0.36</td>
+<td>0.612</td>
+<td>0.806</td>
+<td>Chaperone</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000281147'>SNORD50A</a></td>
+<td>1.35</td>
+<td>0.558</td>
+<td>0.779</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000156603'>MED19</a></td>
+<td>0.32</td>
+<td>0.53</td>
+<td>0.765</td>
+<td>Structural protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000204389'>HSPA1A</a></td>
+<td>0.51</td>
+<td>0.524</td>
+<td>0.762</td>
+<td>Hsp70 family chaperone</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000143333'>RGS16</a></td>
+<td>-0.25</td>
+<td>0.518</td>
+<td>0.759</td>
+<td>GTPase activating protein, G-protein modulator</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000210196'>MT-TP</a></td>
+<td>1.29</td>
+<td>0.516</td>
+<td>0.758</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000234475'>HSPA1A</a></td>
+<td>0.45</td>
+<td>0.498</td>
+<td>0.749</td>
+<td>Hsp70 family chaperone</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000104490'>NCALD</a></td>
+<td>-0.33</td>
+<td>0.486</td>
+<td>0.743</td>
+<td>Calcium-binding protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000175265'>GOLGA8A</a></td>
+<td>0.77</td>
+<td>0.48</td>
+<td>0.74</td>
+<td>Membrane traffic protein</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000278233'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000278189'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000277739'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000276700'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000275757'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000275215'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000274917'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000273730'>RNA5-8S5</a></td>
+<td>1.09</td>
+<td>0.464</td>
+<td>0.732</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000263576'>AL121748.1</a></td>
+<td>0.41</td>
+<td>0.454</td>
+<td>0.727</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000204624'>PTCHD2</a></td>
+<td>0.45</td>
+<td>0.45</td>
+<td>0.725</td>
+<td>Integral membrane protein, receptor</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000275183'>LENG9</a></td>
+<td>0.40</td>
+<td>0.426</td>
+<td>0.713</td>
+<td>Cell surface receptor, ion channel</td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000209082'>MT-TL1</a></td>
+<td>2.33</td>
+<td>0.412</td>
+<td>0.706</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000229807'>XIST</a></td>
+<td>1.89</td>
+<td>0.41</td>
+<td>0.705</td>
+<td></td>
+</tr>
+<tr>
+<td><a href='http://uswest.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000058404'>CAMK2B</a></td>
+<td>1.86</td>
+<td>0.402</td>
+<td>0.701</td>
+<td>Non-receptor serine/threonine protein kinase</td>
+</tr>
+</table>
