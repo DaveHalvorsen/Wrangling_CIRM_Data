@@ -22,7 +22,7 @@ print("the number of data rows of your file is: ")
 print(length(target_id))
 #length(target_id_labels)
 #length(est_counts)
-#length(est_count_numbers)
+length(est_count_numbers)
 
 
 
@@ -73,6 +73,8 @@ print(counter)
 # this is the percentage that are 3Xstandarddev + average
 # AWESOME! It follows the 68-95-99.7 rule :D
 print("The total percentage of est_counts that are 3*stdev + average is")
+print(counter)
+print(length)
 print(100*counter/length(est_count_numbers))
 
 
