@@ -1,5 +1,5 @@
 # Transcription and Translation Review (Python & R)
-I recently mixed up Exons with Introns :S ... here's a review of Exons, Introns, Promoters, and Open Reading Frames with examples done in R Studio & Python:
+This is a review of Exons, Introns, Promoter Regions, and Open Reading Frames. Skip to the next section for the CIRM Data Wrangling Projects.
 
 #### Exons and Introns (Python)
 These programs can be found in the Exons_and_Introns folder:
