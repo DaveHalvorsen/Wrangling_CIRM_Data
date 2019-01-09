@@ -1,3 +1,11 @@
+* <a href="#Transcription_and_Translation_Review">Transcription and Translation Review</a>
+* <a href="#CIRM_and_HCA_Literature_Review">CIRM and HCA Literature Review</a>
+* <a href="#Wrangling_CIRM_Data">Wrangling CIRM Data</a>
+
+
+
+
+<a name="Transcription_and_Translation_Review"></a>
 # Transcription and Translation Review (Python & R)
 This is a review of Exons, Introns, Promoter Regions, and Open Reading Frames. Skip to the next section for the CIRM Data Wrangling Projects.
 
@@ -28,6 +36,7 @@ These files can be found in the Open_Reading_Frames folder:
 
 ![PLACEHOLDER](/Assets/identifying-open-reading-frames.jpg "PLACEHOLDER")
 
+<a name="CIRM_and_HCA_Literature_Review"></a>
 # CIRM_and_HCA_Literature_Review
 These files can be found in the Literature_Review folder:
 * 34 CIRM Publications (and a Tag Storm poster)
@@ -35,6 +44,7 @@ These files can be found in the Literature_Review folder:
 * UCSC Genome Browser Publications
 * Short reviews of CIRM labs, Sequencing Methods, and CIRM Abstracts
 
+<a name="Wrangling_CIRM_Data"></a>
 # Wrangling CIRM Data (Python, R, R Studio, MySQL))
 Here are the projects that I have completed:
 * I had issues using the CIRM data download shell scripts ... specifically, I was getting "certificate verification failed" for Kriegstein and Quake data; I fixed the CIRM scripts by writing Python to add -- insecure to the end of each CIRM script. 
