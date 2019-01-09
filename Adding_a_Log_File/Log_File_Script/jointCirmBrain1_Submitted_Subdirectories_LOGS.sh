@@ -1,0 +1,14 @@
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MIV' --create-dirs -o geneMatrix.tsv --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MIW' --create-dirs -o summary/cellInfo.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MIX' --create-dirs -o summary/cellTypes.json --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MIY' --create-dirs -o summary/heatmap.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MIZ' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MJA' --create-dirs -o summary/seuratGenes.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MJB' --create-dirs -o summary/meta.txt --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MJC' --create-dirs -o summary/meta.tsv --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002MJD' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002XDW' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002XDX' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002XDV' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'https://cirm.ucsc.edu/cgi-bin/cdwGetFile?acc=sc002XDV' --create-dirs -o summary/index.html --write-out "@write_out_format" 2>&1 | tee -a log.txt 
+curl 'the answer to life the universe and everything' --create-dirs -o the_answer_to_life_the_universe_and_everything/42 --write-out "@write_out_format" 2>&1 | tee -a log.txt 
