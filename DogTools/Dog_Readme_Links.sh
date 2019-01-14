@@ -1,0 +1,10 @@
+* <a href="#Wrangling_ASCII_Art">Wrangling ASCII Art</a>
+	* <a href="#">Bork.sh Has a Width Requirement</a>
+	* <a href="#">Using $(tput cols) to Specify Width</a>
+	* <a href="#">Space_Dog.sh Has Width and Height Requirements</a>
+	* <a href="#">Using $(tput lines) to Specify Height</a>
+* <a href="#Analyzing_ASCII_Art">Analyzing ASCII Art</a>
+	* <a href="#">2D Dog Physics with R</a>
+	* <a href="#">Plotting Dog X Position</a>
+	* <a href="#">Plotting Dog Velocity</a>
+	* <a href="#">Plotting Dog Acceleration</a>

@@ -1,5 +1,7 @@
 # About
-I recently completed the UCSC Database and Data Analytics Certificate. The curriculum covers Python, R, and SQL in a variety of contexts. This repository is a demonstration of my data handling skills with the CIRM Stem Cell Hub Data Browser. I have successfully downloaded ~220 GB of data from quakeBrainGeo1, kriegsteinRadialGliaStudy1, and jointCirmBrain1. I created an R script that will identify statistically significant RNA-seq values from >190,000 rows of the sc003JHK.tsv Kallisto Abundance RNA-seq file. **I have also identified, and corrected, two sources of failed downloads _in the absence of a log file._** The big issue here is that an end user will only notice that a download failed IF they read the .sh standard output OR compare their downloads to the server files; this could negatively influence downstream data analysis. **_With End User Experience in mind, I have written a Python script that will add a log file to any of the CIRM download shell scripts._** I think the CIRM database is an awesome collection of scientific data and computational methods of sharing that data. I would *love* to keep playing with methods of improving, and understanding, the CIRM database! :)
+I recently completed the UCSC Database and Data Analytics Certificate. The curriculum covers Python, R, and SQL in a variety of contexts. This repository is a demonstration of my data handling skills with the CIRM Stem Cell Hub Data Browser. I have successfully downloaded ~220 GB of data from quakeBrainGeo1, kriegsteinRadialGliaStudy1, and jointCirmBrain1. I created an R script that will identify statistically significant RNA-seq values from >190,000 rows of the sc003JHK.tsv Kallisto Abundance RNA-seq file. **I have also identified, and corrected, two sources of failed downloads _in the absence of a log file._**
+
+The big issue here is that an end user will only notice that a download failed IF they read the .sh standard output OR compare their downloads to the server files; this could negatively influence downstream data analysis. **_With End User Experience in mind, I have written a Python script that will add a log file to any of the CIRM download shell scripts._** I think the CIRM database is an awesome collection of scientific data and computational methods of sharing that data. I would *love* to keep playing with methods of improving, and understanding, the CIRM database! :)
 
 NOTE: I have added an introductory section that reviews Introns, Exons, and Promoters.
 
@@ -18,6 +20,16 @@ NOTE: I have added an introductory section that reviews Introns, Exons, and Prom
 	* <a href="#Comparing_Failed_to_Complete_Downloads">The Failed Downloads are Too Small</a>
 	* <a href="#Finding_the_HCA_Download_Log_File">Finding the HCA Download File</a>
 	* <a href="#Adding_a_CIRM_Download_Log_File">Adding a CIRM Download Log File</a>
+* <a href="#Wrangling_ASCII_Art">Wrangling ASCII Art</a>
+	* <a href="#">Bork.sh Has a Width Requirement</a>
+	* <a href="#">Using $(tput cols) to Specify Width</a>
+	* <a href="#">Space_Dog.sh Has Width and Height Requirements</a>
+	* <a href="#">Using $(tput lines) to Specify Height</a>
+* <a href="#Analyzing_ASCII_Art">Analyzing ASCII Art</a>
+	* <a href="#">2D Dog Physics with R</a>
+	* <a href="#">Plotting Dog X Position</a>
+	* <a href="#">Plotting Dog Velocity</a>
+	* <a href="#">Plotting Dog Acceleration</a>
 
 <a name="Introns_Exons_and_Promoter_Regions"></a>
 # Introns, Exons, and Promoter Regions (Python & R)
